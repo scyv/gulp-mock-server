@@ -14,6 +14,11 @@ module.exports = function(mockDir, allowCrossOrigin) {
     var mt = req.query.mt || req.body.mt || '';
     var urlObj = url.parse(req.url, true);
     var fullName = urlObj.pathname + mt;
+
+    // strip trailing slash
+    if (fullName.endsWith('/')) {
+      fullName = fullName.substring(0, fullName.length - 1);
+    }
     //var dir = path.join(CWD, './data/');
     var dir = path.join(CWD, mockDir);
     var fileNames = rd.readSync(dir)
