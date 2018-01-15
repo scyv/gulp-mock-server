@@ -69,7 +69,7 @@ Key | Type | Default | Description |
 --- | --- | --- | --- |
 `params` | Object | Null | The parameters of the meet
 `delay` | Number | 0 | Request delay time
-`code` | Number  | 200 | Status code (Temporary does not support)
+`code` | Number  | 200 | Status code
 `response` | Object | {} | The data returned
 
 #### support powerful command line
